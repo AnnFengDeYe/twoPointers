@@ -11,7 +11,7 @@ void swap(int A[], int index1, int index2) {
 
 //对区间[left, right]进行划分
 int randPartition(int A[], int left, int right){
-    //选择当前区间首中尾三个元素的中位数作为pivot
+    //生成[left, right]内的随机数
     int pivotIndex = round(1.0 * rand() / RAND_MAX * (right - left) + left);
     swap(A, left, pivotIndex);    //将得到的中位数和首元素交换 => 固定位置法
     int pivot = A[left];
