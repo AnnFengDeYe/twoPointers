@@ -31,7 +31,7 @@ void quickSort(int A[], int left, int right){
         //根据当前序列的pivot 以pos下标为界将[left, right]一分为二
         int pos = randPartition(A, left, right);
         quickSort(A, left, pos - 1); //对左子区间递归进行快速排序
-        quickSort(A, left, pos - 1); //对右子区间递归进行快速排序
+        quickSort(A, pos + 1, right); //对右子区间递归进行快速排序
     }
 }
 
